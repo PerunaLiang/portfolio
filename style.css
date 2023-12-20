@@ -4,7 +4,7 @@
 /* Transitions */
 
 @keyframes fade-up {
-    0% {
+    ` 0% {
         opacity: 0;
         transform: translateY(30px) scale(0.9);
     }
@@ -51,7 +51,7 @@ The height also had to be set to 50vh as it was collapsing under 1150px*/
 }
 
 .proj:hover {
-    background-color: #85bcd1;
+    background-color: hsl(201, 67%, 28%, 0.5)
 }
 
 a:hover {
@@ -75,7 +75,7 @@ body {
     background: linear-gradient(180deg, #6791a1 5%, #dbe3e9 50%, #85bcd1 95%);
     color: #fff;
 
-    /* background-color: #002233; */
+    /* background-color:002233 #; */
     /* that is the bg colour of image */
 
     background-image:
@@ -97,20 +97,23 @@ body {
 
 .spacer {
     /* visibility: hidden; */
-    margin-top: 15px;
+    /* margin-top: 15px; */
+    height: 60px;
     background-color: #526f7a;
     color: #526f7a;
-    padding: 10px;
-    border-radius: 20px;
+    /* padding: 10px; */
+    /* border-radius: 20px; */
     box-shadow: 0 0 20px 20px #526f7a;
     animation: fade-down 1s;
-    background: linear-gradient(90deg, #526f7a 20%, #85bcd1 50%, #526f7a 80%);
+    background: linear-gradient(90deg, #b7deed 10%, #85bcd1 50%);
 
 }
 
 header {
+    /* visibility: hidden; */
+
     font-family: 'Rubik Bubbles', sans-serif;
-    padding: 20px 40px;
+    padding: 10px 40px;
     margin-top: 0;
     /* margin-right: auto;
     margin-left: auto; */
@@ -119,19 +122,27 @@ header {
     align-items: center;
 
     /* Claymorphism website */
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.4);
     /* border-radius: 20px; */
-    box-shadow: 35px 35px 68px 0px rgba(145, 192, 255, 0.5),
+    /* box-shadow: 35px 35px 68px 0px rgba(145, 192, 255, 0.5),
         inset -8px -8px 16px 0px rgba(145, 192, 255, 0.6),
-        inset 0px 11px 28px 0px rgb(255, 255, 255);
+        inset 0px 11px 28px 0px rgb(255, 255, 255); */
+
+
+    /* https://hype4.academy/tools/glassmorphism-generator */
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 
 
     top: 0;
     /* position: sticky; */
     position: fixed;
-    top: 0;
     width: 100%;
+
     /* issue of it going over the edge of page at 100% */
     /* withou 100% it takes up half length */
 
@@ -149,7 +160,9 @@ header {
 } */
 
 header nav {
-    grid-column: 2 / span 6;
+    grid-column: 9 / span 6;
+    margin-right: auto;
+    margin-left: auto;
 
 }
 
@@ -229,6 +242,15 @@ main {
     z-index: -1;
     padding: 20px;
 
+
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+
+
 }
 
 /* had issues with the box appearing on top of nav bar so changed the z index to -1 and -2 
@@ -244,7 +266,7 @@ changing the nav bar to 10 did not appear to work*/
 
 
 #photo1 {
-    visibility: hidden;
+    display: none;
     grid-column: 2/ span 4;
     /* span change from 6 to 4*/
     width: 100%;
@@ -273,15 +295,28 @@ main .welcome {
 main h3 {
     grid-column: span 12;
     text-align: center;
-    text-decoration: underline;
+    border-top: 1px solid;
+
+
+
     font-size: 1.5rem;
+
+    margin: 10px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    /* border-image: linear-gradient(#f6b73c, #4d9f0c, #f6b73c) 30;
+    border-width: 4px;
+    border-style: solid; */
 }
 
 main .desc {
     animation: fade-up 1s;
     text-align: center;
     grid-column: span 2;
-    background-color: #445e69;
+    background-color: rgba(0, 34, 51, 0.6);
     padding: 10px 20px;
     /* border-radius: 5px; */
     /* source | slice | width | outset | repeat */
@@ -291,14 +326,24 @@ main .desc {
 
     box-shadow: 7px 11px 12px 2px rgba(0, 0, 0, 0.25);
 
+    /* background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18); */
+
+    /* the glass goes over the nav bar */
+
 }
+
+
 
 main .proj {
 
     animation: fade-up 1s;
     text-align: center;
     grid-column: span 4;
-    background-color: #445e69;
+    background-color: rgba(0, 34, 51, 0.6);
     padding: 10px 20px;
     border-radius: 5px;
     border-image: url(images/woodborder.jpg) 50 / 10px / 1rem round;
@@ -318,7 +363,7 @@ main .proj {
     align-items: center;
     overflow: hidden;
     text-align: center;
-    grid-column: 5/ span 5;
+    grid-column: 8/ span 5;
 
 }
 
@@ -346,7 +391,7 @@ main .proj {
 .box2 span {
     position: absolute;
     inset: 5px;
-    background-color: #7ab3c9;
+    background-color: #002233;
     border-radius: 16px;
     z-index: -1;
     padding: 20px;
@@ -362,12 +407,22 @@ main .proj {
         width: 100%;
     }
 
+    header nav {
+        grid-column: 6 / span 6;
+    }
+
     main img {
         grid-column: 2 /span 10;
     }
 
     .box {
         grid-column: 3/ span 8;
+    }
+
+    .box2 {
+        grid-column: 3/ span 8;
+        width: 100%;
+        justify-content: center;
     }
 
     main .welcome {
@@ -393,8 +448,8 @@ main .proj {
     }
 
     header nav {
-        grid-column: span 12;
-        justify-self: center;
+        grid-column: 2/ span 8;
+
     }
 
     .box {
@@ -403,6 +458,7 @@ main .proj {
 
     .box2 {
         grid-template-columns: span 12;
+        width: 100%;
     }
 
     main img {
