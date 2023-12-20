@@ -4,7 +4,7 @@
 /* Transitions */
 
 @keyframes fade-up {
-    ` 0% {
+    0% {
         opacity: 0;
         transform: translateY(30px) scale(0.9);
     }
@@ -46,6 +46,19 @@ The height also had to be set to 50vh as it was collapsing under 1150px*/
 
 .pop:hover {
     background: url(images/project1b.jpg) no-repeat;
+    background-size: 100%;
+    display: inline-block;
+}
+
+.pop2 {
+    background: url(images/nyan.jpg) no-repeat;
+    background-size: 100%;
+    display: inline-block;
+
+}
+
+.pop2:hover {
+    background: url(images/nyan2.jpg) no-repeat;
     background-size: 100%;
     display: inline-block;
 }
