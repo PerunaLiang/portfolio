@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Rubik+Bubbles&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Pixelify+Sans&family=Rubik+Bubbles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Pixelify+Sans&family=Rubik+Bubbles&family=Ubuntu&display=swap');
 
 /* Transitions */
 
@@ -83,7 +82,7 @@ a {
 
 body {
     margin: 0;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     background-color: white;
     background: linear-gradient(180deg, #6791a1 5%, #dbe3e9 50%, #85bcd1 95%);
     color: #fff;
@@ -109,7 +108,7 @@ body {
 }
 
 .spacer {
-    /* visibility: hidden; */
+    visibility: hidden;
     /* margin-top: 15px; */
     height: 60px;
     background-color: #526f7a;
@@ -125,7 +124,8 @@ body {
 header {
     /* visibility: hidden; */
 
-    font-family: 'Rubik Bubbles', sans-serif;
+    /* font-family: 'Rubik Bubbles', sans-serif; */
+    font-weight: bold;
     padding: 10px 40px;
     margin-top: 0;
     /* margin-right: auto;
@@ -144,10 +144,11 @@ header {
 
 
     /* https://hype4.academy/tools/glassmorphism-generator */
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
     border: 1px solid rgba(255, 255, 255, 0.18);
 
 
@@ -308,17 +309,18 @@ main .welcome {
 main h3 {
     grid-column: span 12;
     text-align: center;
-    border-top: 1px solid;
+    /* border-top: 1px solid; */
+    animation: fade-down 1s;
 
 
 
     font-size: 1.5rem;
-
+    /* 
     margin: 10px;
     display: flex;
     height: 100%;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 
     /* border-image: linear-gradient(#f6b73c, #4d9f0c, #f6b73c) 30;
     border-width: 4px;
@@ -455,9 +457,10 @@ main .proj {
 
 @media (max-width: 600px) {
     header h1 {
-        text-align: center;
+        /* text-align: center;
         grid-column: span 12;
-        margin: 0;
+        margin: 0; */
+        display: flex;
     }
 
     header nav {
